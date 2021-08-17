@@ -1,0 +1,132 @@
+.z-page {
+  position: relative;
+  height: 100%;
+}
+.z-show-wrap {
+  position: relative;
+  height: 100%;
+  // overflow-y: scroll;
+  // min-height: 700px;
+  display: flex;
+  flex-direction: column;
+  width: 375px;
+  // height: 700px;
+  background: #fff;
+  margin: auto;
+
+  > img {
+    width: 100%;
+    transform: translateZ(10px);
+  }
+
+  &-content {
+    position: relative;
+    width: 475px;
+    margin-top: -10px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    flex: 1;
+    overflow-y: scroll;
+    &-addbtn {
+      width: 375px;
+      height: 80px;
+      line-height: 80px;
+      color: #00b4ca;
+      font-size: 18px;
+      text-align: center;
+      cursor: pointer;
+      > i {
+        margin-right: 4px;
+      }
+    }
+  }
+
+  &-add {
+    text-align: center;
+    background-color: #ffffff;
+    color: #155bd4;
+    font-size: 18px;
+    line-height: 18px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    &-top {
+      top: -10px;
+    }
+    &-bottom {
+      bottom: -10px;
+    }
+  }
+
+  &-operate {
+    position: absolute;
+    right: -60px;
+    top: 0;
+    // background: #ffffff;
+    color: rgba(3, 3, 3, 0.6);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    // justify-content: space-around;
+    font-size: 18px;
+    > i {
+      &:not(:first-child) {
+        margin-left: 4px;
+      }
+      &:hover {
+        color: #155bd4;
+      }
+    }
+  }
+}
+
+/*item module css start */
+.z-module {
+  position: relative;
+  width: 375px;
+  cursor: pointer;
+  &::after {
+    position: absolute;
+    box-sizing: border-box;
+    content: " ";
+    pointer-events: none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 1px solid transparent;
+  }
+
+  &-selected {
+    &::after {
+      border: 2px solid #155bd4;
+    }
+  }
+
+  &-hover {
+    &::after {
+      border: 2px dashed #155bd4;
+    }
+  }
+}
+
+/*item module css end */
+
+.z-editor-wrap {
+  overflow-y: scroll;
+  height: 100%;
+}
+
+.z-footer-wrap {
+  text-align: center;
+}
+
+// modal
+.z-modal-buttons {
+  > button {
+    margin-bottom: 9px;
+    margin-right: 10px;
+  }
+}
