@@ -5,6 +5,7 @@ import Product from './product.vue'
 import ProductGroup from './product-group.vue'
 import EmptyLine from './empty-line.vue'
 import Customer from './customer.vue'
+import Porcelain from './porcelain.vue'
 
 export {
   Ad,
@@ -13,5 +14,6 @@ export {
   Product,
   ProductGroup,
   EmptyLine,
-  Customer
+  Customer,
+  Porcelain
 }

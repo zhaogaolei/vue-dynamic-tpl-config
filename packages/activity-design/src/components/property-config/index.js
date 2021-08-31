@@ -4,6 +4,7 @@ import PictureEditor from './picture.vue'
 import ProductEditor from './product.vue'
 import ProductGroupEditor from './product-group.vue'
 import CustomerEditor from './customer.vue'
+import PorcelainEditor from './porcelain.vue'
 
 export {
   AdEditor,
@@ -11,5 +12,6 @@ export {
   PictureEditor,
   ProductEditor,
   ProductGroupEditor,
-  CustomerEditor
+  CustomerEditor,
+  PorcelainEditor
 }

@@ -30,6 +30,7 @@
               <ProductGroup v-if="item.type==='productGroup'" :record="item" :background-color="backgroundColor" />
               <EmptyLine v-if="item.type==='emptyLine'" :record="item" />
               <Customer v-if="item.type==='customer'" :record="item" />
+              <Porcelain v-if="item.type==='porcelain'" :record="item" />
 
               <span class="z-show-wrap-add z-show-wrap-add-bottom" v-show="item.key === mouseOverItem.key" @click="bottomAdd($event,item,index)">
                 <a-icon theme="filled" type="plus-circle" />
@@ -53,6 +54,7 @@
           <ProductEditor v-if="seletedItem.type==='product'" :seleted-item="seletedItem" />
           <ProductGroupEditor ref="productGroupEditorRef" v-if="seletedItem.type==='productGroup'" :seleted-item="seletedItem" />
           <CustomerEditor v-if="seletedItem.type==='customer'" :seleted-item="seletedItem" />
+          <PorcelainEditor v-if="seletedItem.type==='porcelain'" :seleted-item="seletedItem" />
         </div>
       </template>
 
@@ -80,8 +82,8 @@
 import cloneDeep from 'lodash/cloneDeep'
 import Layout from '../../layout'
 import { basicsList } from './config/data-config'
-import { Ad, Coupon, Picture, Product, ProductGroup, EmptyLine, Customer } from './components/form-item'
-import { AdEditor, CouponEditor, PictureEditor, ProductEditor, ProductGroupEditor, CustomerEditor } from './components/property-config'
+import { Ad, Coupon, Picture, Product, ProductGroup, EmptyLine, Customer, Porcelain } from './components/form-item'
+import { AdEditor, CouponEditor, PictureEditor, ProductEditor, ProductGroupEditor, CustomerEditor, PorcelainEditor } from './components/property-config'
 export default {
   name: 'ActivityDesign',
   components: {
@@ -93,12 +95,15 @@ export default {
     ProductGroup,
     EmptyLine,
     Customer,
+    Porcelain,
+
     AdEditor,
     CouponEditor,
     PictureEditor,
     ProductEditor,
     ProductGroupEditor,
-    CustomerEditor
+    CustomerEditor,
+    PorcelainEditor
   },
   props: {
     list: {

@@ -23,6 +23,7 @@ export default {
               actionUrl: ''
             }
           ],
+          swiperType: 0,
           auto: false,
           loop: false,
           isFull: true,

@@ -10,6 +10,7 @@ export const basicsList = [
         actionUrl: ''
       }
     ],
+    swiperType: 0, // 默认轮播广告
     auto: false,
     loop: false,
     isFull: true,
@@ -62,5 +63,18 @@ export const basicsList = [
     description: '', // 添加文案
     qrcodeUrl: '', // 二维码
     isFull: true
+  },
+  {
+    key: '',
+    type: 'porcelain',
+    label: '瓷片区',
+    layout: 0, // 0:左一右一 1:左一右二
+    porcelainList: [
+      {
+        imgUrl: '',
+        actionUrl: ''
+      }
+    ]
+
   }
 ]

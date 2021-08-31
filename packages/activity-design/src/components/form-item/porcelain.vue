@@ -1,12 +1,12 @@
 <template>
-  <div :class="['z-module-ad', { 'z-module-ad--is-full': record.isFull }]">
-    <img v-if="record.swiperType===0" src="http://p1.zmjiudian.com/121cKZp0_jupiter">
-    <img v-if="record.swiperType===1" src="http://p1.zmjiudian.com/121bSH00_jupiter">
+  <div :class="['z-module-porcelain', { 'z-module-porcelain--is-full': true }]">
+    <img v-if="record.layout===0" src="http://p1.zmjiudian.com/121bSFI1_jupiter">
+    <img v-if="record.layout===1" src="http://p1.zmjiudian.com/121bSFI0_jupiter">
   </div>
 </template>
 <script>
 export default {
-  name: 'Ad',
+  name: 'Porcelain',
   props: {
     record: {
       type: Object,
@@ -24,9 +24,8 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-.z-module-ad {
-  // min-height: 165px;
-  // background-color: #ebf8fd;
+.z-module-porcelain {
+  min-height: 165px;
   color: #88c4dc;
   padding: 0 18px;
   > img {

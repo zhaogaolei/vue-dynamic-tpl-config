@@ -37,6 +37,13 @@
         <a slot="extra" target="_blank" :href="`${adManageUrl}${seletedItem.adTypeId}`" v-if="seletedItem.adTypeId">前往广告后台>></a>
         <a-input v-model="seletedItem.adTypeId" />
       </a-form-model-item>
+      <a-form-model-item label="展示样式">
+        <a-radio-group v-model="seletedItem.swiperType">
+          <a-radio v-for="(item,index) in swiperTypeList" :key="index" :value="item.value">
+            {{ item.label }}
+          </a-radio>
+        </a-radio-group>
+      </a-form-model-item>
       <a-form-model-item label="是否自动轮播">
         <a-switch v-model="seletedItem.auto" />
       </a-form-model-item>
@@ -64,7 +71,8 @@ export default {
   data () {
     return {
       sourceList: DIC.adSource,
-      adManageUrl: DIC.adManageUrl
+      adManageUrl: DIC.adManageUrl,
+      swiperTypeList: DIC.swiperType
     }
   },
 
